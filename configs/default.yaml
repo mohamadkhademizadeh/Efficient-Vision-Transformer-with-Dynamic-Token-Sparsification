@@ -1,0 +1,13 @@
+# Model
+dim: 128
+depth: 6
+heads: 4
+prune_layers: [3, 5]  # Prune after these layers
+keep_ratios: [0.7, 0.5]  # Keep ratios for each pruning stage
+
+# Training
+batch_size: 64
+epochs: 50
+lr: 3e-4
+sparsity_weight: 0.1  # Weight for sparsity regularization
+target_sparsity: 0.5  # Target fraction of tokens to prune
